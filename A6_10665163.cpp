@@ -1,20 +1,21 @@
 #include <iostream>
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
 	// the no of elements you want
 	int indexList;
-	std::cout << "Please enter the number of list you want to enter: ";
-	std::cin >> indexList;
-	std::cout << std::endl;
+	cout << "Please enter the number of list you want to enter: ";
+	cin >> indexList;
+	cout << endl;
 
 	int *a = new int[indexList];
 	// enter the numbers
 
 	for (int i = 0; i < indexList; ++i)
 	{
-		std::cout << "Please enter number " << i+1 << ": ";
-		std::cin >> a[i];
+		cout << "Please enter number " << i+1 << ": ";
+		cin >> a[i];
 	}
 
 // sort the numbers
@@ -34,18 +35,18 @@ int main(int argc, char const *argv[])
 	}
 
 // output the sorted numbers
-	std::cout << "The numbers are: ";
+	cout << "The numbers are: ";
 	for (int i = 0; i < indexList; ++i)
 	{
-		std::cout << a[i] << " ";
+		cout << a[i] << " ";
 	}
-	std::cout << std::endl;
+	cout << endl;
 
 	// searching for the needle
 	int needle;
-	std::cout << "Please enter the number you are looking for: ";
-	std::cin >> needle;
-	std::cout << std::endl;
+	cout << "Please enter the number you are looking for: ";
+	cin >> needle;
+	cout << endl;
 
 // declaring variables for the index of the first number, the middle and the last
 	int firstNo = 0;
@@ -79,9 +80,9 @@ int main(int argc, char const *argv[])
 // output the position of the needle 
 	if (found)
 	{
-		std::cout << needle << " found at position "<< middleNo + 1 << std::endl;
+		cout << needle << " found at position "<< middleNo + 1 << endl;
 	} else {
-		std::cout << needle << " not found\n";
+		cout << needle << " not found\n";
 	}
 
 	return 0;
